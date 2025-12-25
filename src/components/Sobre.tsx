@@ -1,0 +1,85 @@
+'use client';
+
+import Link from 'next/link';
+
+interface SobreProps {
+  id: string;
+  titulo: string;
+  fecha: string;
+  ruta: string;
+}
+
+export default function Sobre({ titulo, fecha, ruta }: SobreProps) {
+  // Usar la fecha de hoy en lugar de la fecha del JSON
+  const fechaFormateada = new Date().toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
+  return (
+    <Link href={ruta} className="group block">
+      <div className="relative transform transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+        {/* Sombra decorativa */}
+        <div className="absolute -inset-1 bg-gradient-to-r from-pink-300 via-rose-300 to-pink-300 dark:from-pink-800 dark:via-rose-800 dark:to-pink-800 rounded-xl opacity-0 group-hover:opacity-30 blur-md transition-opacity duration-500"></div>
+        
+        {/* Sobre cerrado */}
+        <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 dark:from-pink-900/40 dark:via-rose-900/40 dark:to-pink-900/50 rounded-xl shadow-lg border-2 border-pink-200/60 dark:border-pink-800/40 overflow-hidden backdrop-blur-sm">
+          {/* Patrón de líneas del sobre más visible */}
+          <div className="absolute inset-0 opacity-15 dark:opacity-10">
+            <div className="absolute top-1/2 left-0 right-0 h-px bg-pink-400 dark:bg-pink-600"></div>
+            <div className="absolute top-1/3 left-0 right-0 h-px bg-pink-400 dark:bg-pink-600"></div>
+            <div className="absolute top-2/3 left-0 right-0 h-px bg-pink-400 dark:bg-pink-600"></div>
+          </div>
+          
+          {/* Solapa del sobre mejorada */}
+          <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-pink-200/90 via-pink-150/80 to-pink-100/70 dark:from-pink-800/50 dark:via-pink-900/40 dark:to-pink-900/30 border-b-2 border-pink-300/60 dark:border-pink-700/40">
+            {/* Sello decorativo */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+              <div className="relative w-14 h-14 bg-gradient-to-br from-pink-100 to-rose-100 dark:from-pink-900/70 dark:to-rose-900/70 rounded-full border-2 border-pink-400 dark:border-pink-600 flex items-center justify-center shadow-md">
+                <div className="w-8 h-8 bg-gradient-to-br from-pink-400 to-rose-400 dark:from-pink-500 dark:to-rose-500 rounded-full flex items-center justify-center">
+                  <div className="text-white dark:text-pink-200 text-xs">💌</div>
+                </div>
+                {/* Brillo decorativo */}
+                <div className="absolute top-1 left-1 w-3 h-3 bg-white/60 dark:bg-white/20 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contenido del sobre mejorado */}
+          <div className="absolute bottom-0 left-0 right-0 p-5 pt-10 bg-gradient-to-t from-pink-50/80 to-transparent dark:from-pink-900/30 dark:to-transparent">
+            <h3 className="text-sm md:text-base font-sans font-semibold text-pink-700 dark:text-pink-300 mb-1.5 line-clamp-2 leading-tight">
+              {titulo}
+            </h3>
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 rounded-full bg-pink-400 dark:bg-pink-500"></div>
+              <p className="text-xs text-pink-500 dark:text-pink-400 font-medium">
+                {fechaFormateada}
+              </p>
+            </div>
+          </div>
+
+          {/* Efecto hover - sobre abierto con más detalle */}
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-50/90 via-rose-50/90 to-pink-50/90 dark:from-pink-950/70 dark:via-rose-950/70 dark:to-pink-950/70 opacity-0 group-hover:opacity-100 transition-all duration-500">
+            {/* Carta dentro del sobre */}
+            <div className="absolute inset-4 bg-white/80 dark:bg-zinc-900/80 rounded-lg border-2 border-dashed border-pink-300 dark:border-pink-700 shadow-inner">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="text-3xl animate-pulse">💌</div>
+              </div>
+              {/* Líneas de texto simuladas */}
+              <div className="absolute top-6 left-4 right-4 space-y-2 opacity-30">
+                <div className="h-1 bg-pink-300 dark:bg-pink-700 rounded w-3/4"></div>
+                <div className="h-1 bg-pink-300 dark:bg-pink-700 rounded w-full"></div>
+                <div className="h-1 bg-pink-300 dark:bg-pink-700 rounded w-5/6"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Brillo sutil en hover */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
