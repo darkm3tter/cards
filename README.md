@@ -135,3 +135,115 @@ El diseño usa tonos rosas minimalistas:
 - El diseño es minimalista por defecto, pero puedes agregar cualquier estilo
 - Usa componentes de React para reutilizar elementos entre cartas
 - Las imágenes van en la carpeta `public/`
+
+## 🚀 Deploy
+
+### Opción 1: Vercel (Recomendado)
+
+Vercel es la plataforma creada por los mismos desarrolladores de Next.js, por lo que es la opción más sencilla y optimizada.
+
+#### Pasos:
+
+1. **Instala Vercel CLI** (opcional, también puedes usar la interfaz web):
+```bash
+npm i -g vercel
+```
+
+2. **Haz login en Vercel**:
+```bash
+vercel login
+```
+
+3. **Haz deploy**:
+```bash
+vercel
+```
+
+4. **Sigue las instrucciones** en la terminal o ve a [vercel.com](https://vercel.com) y:
+   - Conecta tu repositorio de GitHub/GitLab/Bitbucket
+   - Vercel detectará automáticamente que es un proyecto Next.js
+   - Haz clic en "Deploy"
+   - ¡Listo! Tu sitio estará en línea en minutos
+
+**Ventajas:**
+- ✅ Gratis para proyectos personales
+- ✅ Deploy automático con cada push a GitHub
+- ✅ SSL automático
+- ✅ CDN global
+- ✅ Optimizado específicamente para Next.js
+
+### Opción 2: Netlify
+
+Netlify también es muy fácil de usar y tiene una buena integración con Next.js.
+
+#### Pasos:
+
+1. **Instala Netlify CLI** (opcional):
+```bash
+npm i -g netlify-cli
+```
+
+2. **Haz login**:
+```bash
+netlify login
+```
+
+3. **Haz deploy**:
+```bash
+netlify deploy --prod
+```
+
+O usa la interfaz web:
+- Ve a [netlify.com](https://netlify.com)
+- Conecta tu repositorio
+- Configura el build command: `npm run build`
+- Configura el publish directory: `.next`
+- Haz clic en "Deploy"
+
+### Opción 3: Deploy Manual
+
+Si prefieres tener más control o usar tu propio servidor:
+
+#### Pasos:
+
+1. **Construye el proyecto**:
+```bash
+npm run build
+```
+
+2. **Inicia el servidor de producción**:
+```bash
+npm start
+```
+
+3. **Configura un servidor Node.js** (como PM2 para mantenerlo corriendo):
+```bash
+npm install -g pm2
+pm2 start npm --name "cartas" -- start
+pm2 save
+pm2 startup
+```
+
+**Nota:** Asegúrate de tener Node.js 18+ instalado en tu servidor.
+
+### Variables de Entorno
+
+Si tu proyecto necesita variables de entorno:
+
+1. **Crea un archivo `.env.local`** en la raíz del proyecto:
+```env
+NEXT_PUBLIC_VARIABLE=valor
+```
+
+2. **En Vercel/Netlify**, agrega las variables en la configuración del proyecto (Settings → Environment Variables)
+
+### Verificar el Build Localmente
+
+Antes de hacer deploy, puedes verificar que todo funciona correctamente:
+
+```bash
+npm run build
+npm start
+```
+
+Luego visita `http://localhost:3000` para verificar que todo está funcionando.
