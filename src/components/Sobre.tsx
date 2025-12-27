@@ -10,8 +10,8 @@ interface SobreProps {
 }
 
 export default function Sobre({ titulo, fecha, ruta }: SobreProps) {
-  // Usar la fecha de hoy en lugar de la fecha del JSON
-  const fechaFormateada = new Date().toLocaleDateString('es-ES', {
+  // Usar la fecha del JSON
+  const fechaFormateada = new Date(fecha).toLocaleDateString('es-ES', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
