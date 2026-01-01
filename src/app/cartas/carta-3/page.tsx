@@ -243,11 +243,16 @@ export default function Carta3Page() {
                   
                   <p className="indent-4 sm:indent-6 relative">
                     <span className="absolute -left-2 top-0 text-pink-300/30 dark:text-pink-700/30 text-xs">💕</span>
-                    Te deseo un año 2026 lleno de muchas cosas bonitas a tu vida, un 2026 lleno de cosas increibles, y se que lo tendras porque te lo mereces.
+                    Le doy gracias a Dios por tu vida y estoy feliz de tenerte en mi vida. Tu presencia ha sido una bendición que ha transformado mis días.
                   </p>
                   
                   <p className="indent-4 sm:indent-6 relative">
                     <span className="absolute -left-2 top-0 text-pink-300/30 dark:text-pink-700/30 text-xs">💖</span>
+                    Te deseo un año 2026 lleno de muchas cosas bonitas a tu vida, un 2026 lleno de cosas increibles, y se que lo tendras porque te lo mereces.
+                  </p>
+                  
+                  <p className="indent-4 sm:indent-6 relative">
+                    <span className="absolute -left-2 top-0 text-pink-300/30 dark:text-pink-700/30 text-xs">⭐</span>
                     Espero ser un mejor ser, para siempre escucharte y apoyarte, te prometo que no te voy a dejar sola, siempre que lo necesites estare para ti, pase lo que pase, llueva, truene o relampaguee, no dudes en que yo estare contigo siempre
                   </p>
                 </div>
