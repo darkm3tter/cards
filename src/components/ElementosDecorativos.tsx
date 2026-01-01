@@ -20,7 +20,7 @@ export default function ElementosDecorativos() {
         ✨
       </div>
       <div className="hidden lg:block absolute top-1/3 right-10 text-3xl md:text-4xl opacity-5 dark:opacity-10 text-pink-300 dark:text-pink-700 animate-float-slow">
-        💌
+        🍓
       </div>
       
       {/* Líneas decorativas */}

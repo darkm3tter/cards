@@ -10,6 +10,12 @@
     "titulo": "Lo mucho que me caes mal",
     "fecha": "2025-12-27",
     "ruta": "/cartas/carta-2"
+  },
+  {
+    "id": "carta-3",
+    "titulo": "Feliz Año Nuevo",
+    "fecha": "2025-12-31",
+    "ruta": "/cartas/carta-3"
   }
 ]
 
