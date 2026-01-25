@@ -16,6 +16,12 @@
     "titulo": "Feliz Año Nuevo",
     "fecha": "2025-12-31",
     "ruta": "/cartas/carta-3"
+  },
+  {
+    "id": "carta-4",
+    "titulo": "Como cuando me caes mal",
+    "fecha": "2026-01-24",
+    "ruta": "/cartas/carta-4"
   }
 ]
 
