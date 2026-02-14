@@ -108,9 +108,9 @@ export default async function HomePage() {
               <div className="w-12 sm:w-16 md:w-24 h-px bg-gradient-to-l from-transparent via-pink-300/50 to-pink-300/50 dark:via-pink-700/50 dark:to-pink-700/50"></div>
             </div>
 
-            {/* Grid de sobres */}
+            {/* Grid de cartas */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-              {sobres.map((sobre: any, index: number) => (
+              {sobres.filter((s: any) => s.id !== 'carta-6').map((sobre: any, index: number) => (
                 <div 
                   key={sobre.id}
                   className="animate-fade-in"
@@ -125,6 +125,29 @@ export default async function HomePage() {
                 </div>
               ))}
             </div>
+
+            {/* Section aparte: Contrato de Mejor Amistad */}
+            {sobres.find((s: any) => s.id === 'carta-6') && (() => {
+              const contrato = sobres.find((s: any) => s.id === 'carta-6');
+              return (
+                <section className="mt-16 sm:mt-20 md:mt-24 flex flex-col items-center relative z-10 pb-8">
+                  <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+                    <div className="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent to-amber-400/60 dark:to-amber-500/60"></div>
+                    <span className="text-amber-600 dark:text-amber-400 text-sm font-medium tracking-wide">Acuerdo especial</span>
+                    <div className="w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-amber-400/60 dark:to-amber-500/60"></div>
+                  </div>
+                  <div className="w-64 sm:w-80 md:w-96 mx-auto animate-fade-in">
+                    <Sobre
+                      id="carta-6"
+                      titulo="Contrato de Mejor Amistad"
+                      fecha={contrato.fecha}
+                      ruta="/cartas/carta-6"
+                      variant="contrato"
+                    />
+                  </div>
+                </section>
+              );
+            })()}
           </>
         )}
 
