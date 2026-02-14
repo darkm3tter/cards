@@ -61,7 +61,7 @@ export default function Carta5Page() {
                 {/* Título decorado */}
                 <div className="text-center mb-6 sm:mb-8">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-sans font-medium text-pink-600 dark:text-pink-400 mb-2 tracking-normal px-2">
-                    Día de la Amistad
+                    San Valentín
                   </h1>
                   <div className="flex items-center justify-center gap-2 sm:gap-3 my-3 sm:my-4">
                     <div className="w-8 sm:w-12 h-px bg-pink-300 dark:bg-pink-700"></div>
@@ -80,15 +80,23 @@ export default function Carta5Page() {
                 {/* Cuerpo de la carta */}
                 <div className="text-zinc-700 dark:text-zinc-200 leading-relaxed space-y-4 sm:space-y-5 text-sm sm:text-base md:text-lg font-sans">
                   <p className="indent-4 sm:indent-6">
-                    En este Día de la Amistad quiero decirte que estoy muy feliz por ser tu mejor amigo.
+                    En este día de San Valentín quiero escribirte con el corazón en la mano para decirte lo mucho que significas para mí. Estoy profundamente feliz de ser tu mejor amigo, y no es algo que diga a la ligera.
                   </p>
                   
                   <p className="indent-4 sm:indent-6">
-                    Tener tu amistad en mi vida es uno de los mayores regalos que puedo tener. La verdad es que te quiero muchísimo y espero que siempre podamos compartir estos momentos juntos.
+                    Cuando pienso en nuestra amistad, mi corazón se llena de gratitud. Eres una persona increíble que ilumina mis días con tu presencia, tu forma de ser y todo lo que compartimos juntos. Cada momento contigo es especial para mí.
                   </p>
                   
                   <p className="indent-4 sm:indent-6">
-                    Te quiero mucho.
+                    Tener tu amistad en mi vida es uno de los mayores regalos que Dios me ha dado. Saber que puedo contar contigo, que me entiendes y que estamos ahí el uno para el otro me da una paz y una alegría que no puedo explicar con palabras.
+                  </p>
+                  
+                  <p className="indent-4 sm:indent-6">
+                    La verdad es que te quiero muchísimo. Eres mi mejor amiga, mi confidente, la persona que me hace reír cuando todo parece gris. Gracias por estar siempre, por creer en mí y por ser quien eres. Espero de todo corazón que nuestra amistad dure para siempre.
+                  </p>
+                  
+                  <p className="indent-4 sm:indent-6">
+                    En este día tan especial, quiero que sepas que eres parte fundamental de mi vida y que te llevo siempre en mi corazón. Te quiero mucho, con todo mi cariño.
                   </p>
                 </div>
 
